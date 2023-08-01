@@ -26,7 +26,7 @@ public class PendulumPanel extends JPanel {
         int endPointX = (int) (HEIGHT/2 + pendulum.getXCord(time));
         int endPointY = (int) (HEIGHT/2 - pendulum.getYCord(time));
         g2d.drawLine(HEIGHT/2, WIDTH/2, endPointX, endPointY);
-        g2d.drawOval((int) (endPointX - pendulum.getRadius()/2),
+        g2d.fillOval((int) (endPointX - pendulum.getRadius()/2),
                 (int) (endPointY - pendulum.getRadius()/2),
                 (int) pendulum.getRadius(),
                 (int) pendulum.getRadius());
