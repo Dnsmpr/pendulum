@@ -13,6 +13,7 @@ public class PendulumPanel extends JPanel {
 
         Timer timer = new Timer(17, e -> {
             time += DELTA_TIME;
+            pendulum.applyDamping();
             repaint();
         });
         timer.start();
