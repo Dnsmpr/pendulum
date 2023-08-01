@@ -7,13 +7,11 @@ public class PendulumPanel extends JPanel {
     private final Pendulum pendulum;
     private double time = 0;
     private static final double DELTA_TIME = 1;
+    private static final int REFRESH_RATE_60HZ = 17;
 
     public PendulumPanel(Pendulum pendulum) {
         this.pendulum = pendulum;
-
-        Timer timer = new Timer(17, e -> update(pendulum));
-        timer.start();
-
+        new Timer(REFRESH_RATE_60HZ, e -> update(pendulum)).start();
     }
 
     private void update(Pendulum pendulum) {
