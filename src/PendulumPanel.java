@@ -11,13 +11,15 @@ public class PendulumPanel extends JPanel {
     public PendulumPanel(Pendulum pendulum) {
         this.pendulum = pendulum;
 
-        Timer timer = new Timer(17, e -> {
-            time += DELTA_TIME;
-            pendulum.applyDamping();
-            repaint();
-        });
+        Timer timer = new Timer(17, e -> update(pendulum));
         timer.start();
 
+    }
+
+    private void update(Pendulum pendulum) {
+        time += DELTA_TIME;
+        pendulum.applyDamping();
+        repaint();
     }
 
     @Override
