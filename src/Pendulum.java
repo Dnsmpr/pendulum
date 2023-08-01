@@ -12,10 +12,6 @@ public final class Pendulum {
         this.initialTheta = initialTheta;
     }
 
-    public double getOmega() {
-        return omega;
-    }
-
     public double getXCord(double t) {
         return this.length * Math.sin(this.getTheta(t));
     }
@@ -26,10 +22,6 @@ public final class Pendulum {
 
     public double getTheta(double t) {
         return this.initialTheta * Math.cos(this.omega * t);
-    }
-
-    public double getLength() {
-        return this.length;
     }
 
     public double getRadius() {
