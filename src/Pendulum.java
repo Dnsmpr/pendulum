@@ -6,12 +6,12 @@ public final class Pendulum {
     private final double currentAngle;
     private static final double K_STRING = 9.18 * Math.pow(10, -4);
     private static final double K_BOB = 7.24 * Math.pow(10, -4);
-    private static final double K_COEFFICIENT = K_STRING + K_BOB;
+    private static final double K_COEFFICIENT = 20 * (K_STRING + K_BOB);
 
     public Pendulum(int radius, double length, double initialTheta) {
         this.radius = radius;
         this.length = length;
-        this.omega = (Math.sqrt(GRAVITY/length) - ((K_COEFFICIENT * K_COEFFICIENT)/4));
+        this.omega = 20 * (Math.sqrt(GRAVITY/length) - ((K_COEFFICIENT * K_COEFFICIENT)/4));
         this.currentAngle = initialTheta;
     }
 

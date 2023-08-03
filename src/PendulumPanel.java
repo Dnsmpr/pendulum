@@ -6,7 +6,7 @@ public class PendulumPanel extends JPanel {
     private static final int WIDTH = 600;
     private final Pendulum pendulum;
     private double time = 0;
-    private static final double DELTA_TIME = 0.75;
+    private static final double DELTA_TIME = 0.0167;
     private static final int REFRESH_RATE_60HZ = 17;
 
     public PendulumPanel(Pendulum pendulum) {
